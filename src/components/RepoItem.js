@@ -9,6 +9,7 @@ export default class RepoItem extends Component {
     item: PropTypes.shape({
       name: PropTypes.string,
       description: PropTypes.string,
+      fork: PropTypes.bool,
       html_url: PropTypes.string,
     }).isRequired
   }
@@ -57,7 +58,7 @@ export default class RepoItem extends Component {
   }
 }
 
-const Item = styled.div`
+export const Item = styled.div`
   padding: 12px 10px;
   cursor: pointer;
 
@@ -70,7 +71,7 @@ const Item = styled.div`
   }
 `
 
-const Title = styled.h4`
+export const Title = styled.h4`
   color: rgba(0,0,0,.65);
   margin-bottom: 4px;
   font-size: 14px;
@@ -78,21 +79,21 @@ const Title = styled.h4`
   display: flex;
 `
 
-const Actions = styled.div`
+export const Actions = styled.div`
 
 `
 
-const Description = styled.div`
+export const Description = styled.div`
   color: rgba(0,0,0,.45);
   font-size: 14px;
   line-height: 22px;
 `
 
-const Info = styled.div`
+export const Info = styled.div`
 
 `
 
-const Fork = styled.div`
+export const Fork = styled.div`
   margin-left: 10px;
   position: relative;
 
@@ -104,12 +105,12 @@ const Fork = styled.div`
   }
 `
 
-const ItemContainer = styled.div`
+export const ItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `
 
-const Arrow = styled.div`
+export const Arrow = styled.div`
   transition: transform 0.2s ease;
   display: block;
   height: 14px;

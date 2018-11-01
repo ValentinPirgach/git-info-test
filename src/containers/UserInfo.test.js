@@ -9,7 +9,7 @@ describe('UserInfo container', () => {
     driver = new UserInfoDriver({fetchUser, fetchRepos})
   });
 
-  test('should render <Search /> component with', () => {
+  test('should render <Search /> component', () => {
     expect(driver.get.Search().length).toEqual(1);
   });
 
@@ -18,7 +18,7 @@ describe('UserInfo container', () => {
     expect(component.prop('onSubmit')).toEqual(driver.get.instance().getUserData);
   });
 
-  test('should render <Info /> component with', () => {
+  test('should render <Info /> component', () => {
     expect(driver.get.Info().length).toEqual(1);
   });
 
@@ -27,7 +27,7 @@ describe('UserInfo container', () => {
     expect(component.prop('user')).toEqual(driver.mockData.props().user);
   });
 
-  test('should render <Repos /> component with', () => {
+  test('should render <Repos /> component', () => {
     expect(driver.get.Repos().length).toEqual(1);
   });
 
