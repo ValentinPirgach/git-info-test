@@ -11,6 +11,7 @@ export default class UserInfoDriver {
   }
 
   mockData = {
+    userName: 'OctoCat',
     props: () => ({
       user: {},
       repos: {}
@@ -22,5 +23,10 @@ export default class UserInfoDriver {
     Info: () => this.wrapper.find(Info),
     Repos: () => this.wrapper.find(Repos),
     instance: () => this.wrapper.instance()
+  }
+
+  when = {
+    SearchSubmited: () =>
+      this.get.Search().prop('onSubmit')({ userName: this.mockData.userName })
   }
 }

@@ -36,4 +36,11 @@ describe('UserInfo container', () => {
     expect(component.prop('user')).toEqual(driver.mockData.props().user);
     expect(component.prop('repos')).toEqual(driver.mockData.props().repos);
   });
+
+  test('should call fetch functions, when Search submited', () => {
+    driver.when.SearchSubmited()
+
+    expect(fetchUser).toHaveBeenCalledWith(driver.mockData.userName)
+    expect(fetchRepos).toHaveBeenCalledWith(driver.mockData.userName)
+  });
 });
