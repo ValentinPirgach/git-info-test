@@ -8,8 +8,14 @@ import styled from 'styled-components'
 export default class Info extends Component {
   static propTypes = {
     user: PropTypes.shape({
+      isFetching: PropTypes.bool,
       empty: PropTypes.bool,
-      avatar_url: PropTypes.string
+      avatar_url: PropTypes.string,
+      name: PropTypes.string,
+      email: PropTypes.string,
+      location: PropTypes.string,
+      followers: PropTypes.number,
+      following: PropTypes.number
     }).isRequired
   }
 

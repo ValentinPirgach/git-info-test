@@ -8,15 +8,12 @@ import * as reposActions from 'actions/repos'
 import { Row, Col } from 'antd'
 
 
-class UserInfo extends Component {
+export class UserInfo extends Component {
   static propTypes = {
     fetchUser: PropTypes.func.isRequired,
     fetchRepos: PropTypes.func.isRequired,
     user: PropTypes.shape({}).isRequired,
-    repos: PropTypes.shape({
-      list: PropTypes.array,
-      isFetching: PropTypes.bool
-    }).isRequired,
+    repos: PropTypes.shape({}).isRequired,
   }
 
   state = {}
