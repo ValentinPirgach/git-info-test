@@ -1,2 +1,6 @@
-export { default as Counter } from './Counter'
+export { default as Search } from './Search'
 export { default as Header } from './Header'
+export { default as Info } from './Info'
+export { default as Repos } from './Repos'
+export { default as RepoItem } from './RepoItem'
+export { default as RepoInfo } from './RepoInfo'
