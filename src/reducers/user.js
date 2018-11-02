@@ -1,7 +1,9 @@
 import * as types from 'constants/ActionTypes'
 import createReducer from 'utils/createReducer'
 
-export default createReducer({empty: true})({
+export const userInitialState = {empty: true}
+
+export default createReducer(userInitialState)({
   [types.FETCH_USER_REQUEST]: (state) => ({
     ...state,
     isFetching: true
@@ -15,6 +17,6 @@ export default createReducer({empty: true})({
   [types.FETCH_USER_FAILED]: (state, action) => ({
     ...state,
     isFetching: false,
-    ...action.payload.response
+    payload: action.payload
   })
 })
